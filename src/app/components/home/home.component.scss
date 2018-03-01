@@ -1,0 +1,131 @@
+@import '../../style-variables.scss';
+
+header{
+    background-color: $headermenucolor;
+    width: 100%;
+    height: 60px;
+    display: flex;    
+    .logo{
+        @media screen and (max-width: 750px){
+            width: 160px;
+        }
+        @media screen and (max-width: 540px){
+            width: 40px;
+                     
+        }
+        width: 264px;
+        height: 60px;
+        transition: width .5s;        
+        background-color: $logobackground;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        div{
+            background-image: url($logoimage);
+            background-size: cover;
+            width: 145px;
+            height: 20px; 
+            @media screen and (max-width: 540px){
+                background-position: right;
+                width: 25px                
+            }
+        }
+        &.logo-hidden{
+            width: 40px;
+            transition: width .5s;
+            div{
+                background-position: right;
+                width: 25px
+            }
+        }
+    }
+    .settings{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;  
+        flex-grow: 1;      
+        a{            
+            color: $white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: .9em;
+            padding-right: 40px;
+        }
+    }
+}
+
+.body-container{
+    width: 100%;
+    display: flex;            
+}
+.menu{
+    @media screen and (max-width: 750px){
+        width: 160px;
+    }
+    @media screen and (max-width: 540px){
+        width: 40px;
+        li{
+            span{
+                display:none;           
+            }            
+        }
+        .navigate{
+            display: none;
+        }
+    }
+    width: 264px;
+    transition: width .5s;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    background-color: $headermenucolor;
+    color: $white;
+    .navigate{
+        color: #4d5056;
+        width: 80%;
+        border-bottom: 1px solid #4d5056;
+        padding: 10px 0;
+        text-align: center;
+        font-weight: bold;        
+        &.navigate-hidden{
+            display: none;
+            transition: display .4s
+        }
+    }
+    ul{
+        list-style: none;
+        padding: 0;
+        width: 80%;
+        li{
+            padding: 10px 0;
+            color: $white;
+            i{
+                margin-right: 5px;
+                color: #5c9df5;
+            }
+            span{
+                font-weight: bold;
+            }                            
+        }
+        
+    }
+    .close-menu{
+        margin: 50% 0;
+    }
+    &.menu-hidden{
+        width: 40px;
+        transition: width .5s;
+        li{
+            span{
+                display:none;
+                transition: display .4s;
+            }
+        }
+    }
+}
+
+.body-outlet{
+    width: 100%;
+    margin: 60px;
+    flex: 1;
+}

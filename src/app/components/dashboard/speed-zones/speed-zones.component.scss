@@ -1,0 +1,13 @@
+.speedzones{
+    display: block;
+    width: 65%;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 1px solid #bfd0e1;
+    border-radius: 6px;
+    padding: 10px;
+    @media screen and (max-width: 1155px){
+        width: 99%;
+        padding: 0;
+    }
+}

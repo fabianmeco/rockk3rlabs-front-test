@@ -1,0 +1,28 @@
+.chart-container{
+    width: 100%;    
+    .upper-charts{
+        width: 100%
+    }
+    .bottom-charts{
+        margin-top: 20px; 
+        display: flex;
+        justify-content: space-between;
+        .column-chart{
+            flex: 1
+        }
+        .doghnut-chart{
+            flex: 1;
+            margin-left: 10px;
+        }
+        @media screen and (max-width: 1055px){
+            display: block;
+            .doghnut-chart{
+                margin-top: 10px;
+                margin-left: 0;
+                width: 100%;
+            }.column-chart{
+                width: 100%;
+            }
+        }
+    }
+}
